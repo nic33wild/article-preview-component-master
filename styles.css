@@ -48,6 +48,13 @@ main {
   margin-right: auto;
 }
 
+section {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .article-wrapper {
   background-color: #fff;
   display: grid;
@@ -64,6 +71,7 @@ main {
   width: auto;
   background: var(--Light-Grayish-Blue) url(./images/drawers.jpg) no-repeat;
   background-size: cover;
+  border-radius: 10px 0px 0px 10px;
 }
 
 .layout-right {
@@ -114,6 +122,17 @@ main {
   background-color: var(--Light-Grayish-Blue);
 }
 
+.triangle-down {
+  position: relative;
+  bottom: 100px;
+  left: 335px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid var(--Very-Dark-Grayish-Blue);
+}
+
 .share-button-pushed {
   position: normal;
   padding: 10px;
@@ -160,4 +179,62 @@ main {
 
 .social-icons a {
   margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .article-wrapper {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    width: 350px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .layout-left {
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+    width: 350px;
+    background: var(--Light-Grayish-Blue) url(./images/drawers.jpg) no-repeat;
+    background-size: cover;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .user-info {
+    padding-right: 0;
+  }
+
+  .user-info p {
+    margin-left: -2rem;
+  }
+
+  .share-button-pushed {
+    z-index: 2;
+  }
+
+  .share-social {
+    width: 350px;
+    bottom: 56px;
+    left: -32px;
+    height: 70px;
+    z-index: 1;
+    border-radius: 0px 0px 10px 10px;
+    justify-content: start;
+  }
+
+  .triangle-down {
+    display: none;
+  }
+
+  .social-icons {
+    font-size: 18px;
+    margin-left: 1.5rem;
+  }
+
+  .social-icons a {
+    margin-left: 0.9rem;
+  }
 }
